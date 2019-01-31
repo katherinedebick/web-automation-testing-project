@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>D3 Tests</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Local Host Test</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fibonacci Text Test</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h3<datalist><option>//h3</option><option>css=h3</option></datalist></td><td>Fibonacci</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Factorial Text Test</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h3[2]<datalist><option>//h3[2]</option></datalist></td><td>Factorial</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Say Hello Text Test</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h3[3]<datalist><option>//h3[3]</option></datalist></td><td>Say Hello</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Buttons Present Test</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Input Boxes Present Test</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fibo Test 1</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td>1</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Fibonacci(1) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fibo Test 5</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td>5</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option></datalist></td><td>Fibonacci(5) = 5</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fibo Test String</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td>steve</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option></datalist></td><td>Fibonacci(steve) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fibo Test Double</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td>4.7</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option></datalist></td><td>Fibonacci(4.7) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fibo Test Nil</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fib<datalist><option>name=fib</option><option>//input[@name='fib']</option><option>//input</option><option>css=input[name="fib"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h3<datalist><option>//h3</option><option>css=h3</option></datalist></td><td>Fibonacci</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fibo Test Back To Main</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h3<datalist><option>//h3</option><option>css=h3</option></datalist></td><td>Fibonacci</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fact Test 1</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td>1</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//p[2]<datalist><option>//p[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option></datalist></td><td>Factorial(1) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fact Test 5</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td>5</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option></datalist></td><td>Factorial(5) = 120</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fact Test String</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td>Steve</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//h3</option><option>css=h3</option><option>//p</option></datalist></td><td>Factorial(Steve) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fact Test Double</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td>4.7</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//h3</option><option>css=h3</option><option>//p</option></datalist></td><td>Factorial(4.7) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fact Test Nil</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fact<datalist><option>name=fact</option><option>//input[@name='fact']</option><option>//form[2]/input</option><option>css=input[name="fact"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fact Back To Main</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h3<datalist><option>//h3</option><option>css=h3</option></datalist></td><td>Fibonacci</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hi Test All Lower</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td>bill</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h1<datalist><option>//h1</option><option>css=h1</option></datalist></td><td>Hello, BILL!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hi Test All Caps</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td>BILL</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h1<datalist><option>//h1</option><option>css=h1</option></datalist></td><td>Hello, BILL!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hi Test Differing Caps</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td>BiLl</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h1<datalist><option>//h1</option><option>css=h1</option></datalist></td><td>Hello, BILL!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hi Test Int</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td>1</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h1<datalist><option>//h1</option><option>css=h1</option></datalist></td><td>Hello, 1!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hi Test Nil</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h3<datalist><option>//h3</option><option>css=h3</option></datalist></td><td>Fibonacci</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hi Back To Main</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=n<datalist><option>name=n</option><option>//input[@name='n']</option><option>//form[3]/input</option><option>css=input[name="n"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h3<datalist><option>//h3</option><option>css=h3</option></datalist></td><td>Fibonacci</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Other Page Test</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/hotdog<datalist><option>http://localhost:4567/hotdog</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h1<datalist><option>//h1</option><option>css=h1</option></datalist></td><td>ERROR</td>
+</tr>
+</tbody></table>
+</body>
+</html>

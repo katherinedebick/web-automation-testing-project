@@ -1,0 +1,42 @@
+<html>
+  <head></head>
+  <body>
+      <% if !fib.nil? %>
+        <p>
+            Fibonacci(<%= fib %>) = <%= fib_result %>
+            <p>
+            <a href="/">Back to main</a>
+        </p>
+      <% elsif !fact.nil? %>
+        <p>
+            Factorial(<%= fact %>) = <%= fact_result %>
+            <p>
+            <a href="/">Back to main</a>
+        </p>
+      <%elsif !n.nil? %>
+        <h1>
+            Hello, <%= n %>!
+         </h1>
+        <p>
+        <a href="/">Back to main</a>
+      <% else %>
+        <h3>Fibonacci</h3>
+            <form>
+                <input type='text' name='fib' />
+                <input type='submit' value='Calculate' />
+            </form>
+        <p>
+        <h3>Factorial</h3>
+            <form>
+                <input type='text' name='fact' />
+                <input type='submit' value='Calculate' />
+            </form>
+        <p>
+        <h3>Say Hello</h3>
+            <form>
+                <input type='text' name='n' />
+                <input type='submit' value='Hi' />
+            </form>
+      <% end %>
+  </body>
+</html>
